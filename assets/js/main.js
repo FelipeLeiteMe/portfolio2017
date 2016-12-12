@@ -1,7 +1,9 @@
 
 
 $(window).load(function() {
+  
     $("#loader").fadeOut("slow");
+
     $(".barra-home").addClass("barra-home-key");
     $(".texto-1").addClass("texto-1-anima");
     $("#Fill-22,#Fill-26,#Fill-28,#Fill-29,#Fill-30").addClass("anima-ilustra-fade");
