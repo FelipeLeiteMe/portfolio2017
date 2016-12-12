@@ -1,58 +1,16 @@
 @charset "UTF-8";
-#box {
-  background-color: #88ce02;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100px;
-  height: 100px;
-  transform: translate(-50%, -50%);
-  z-index: 1; }
-
-.boxSmall {
-  position: absolute;
-  background-color: #70a40b;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 25px;
-  height: 75px;
-  z-index: 2; }
-
-.boxTiny {
-  background-color: #577a14;
-  height: 50px;
-  bottom: 0;
-  right: 0;
-  left: auto;
-  z-index: 3; }
-
-div#container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #eee;
-  display: block; }
-
-div#loader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #fff;
-  background-image: url("http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_10.gif");
-  background-position: center center;
-  background-repeat: no-repeat;
-  z-index: 999; }
-
+/*==========  Geral  ==========*/
 html, body {
   color: #fff;
   overflow-x: hidden;
   font-family: 'Roboto Mono', monospace;
   font-size: 100%; }
+
+canvas {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -999; }
 
 h1 {
   font-size: 5rem;
@@ -70,10 +28,34 @@ p {
   line-height: 30px;
   font-weight: 100; }
 
-.topo {
+header {
   background-color: #22019F;
   height: 100vh;
   display: block; }
+
+/*==========  Conteúdo  ==========*/
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #fff;
+  background-image: url("http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_10.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 999; }
+
+.menu-home {
+  padding: 30px 0; }
+
+.menu-home li {
+  display: inline;
+  font-size: 12px;
+  padding: 10px 15px; }
+
+.menu-home span img {
+  padding: 0  15px; }
 
 .img-ilustra-home {
   position: absolute;
@@ -87,17 +69,7 @@ p {
 .textos-home p {
   padding-top: 20px; }
 
-.menu-home {
-  padding: 30px 0; }
-
-.menu-home li {
-  display: inline;
-  font-size: 12px;
-  padding: 10px 15px; }
-
-.menu-home span img {
-  padding: 0  15px; }
-
+/*==========  Conteúdo  ==========*/
 aside {
   position: fixed;
   width: 100%;
@@ -163,11 +135,20 @@ path, polygon, g {
   animation: texto1 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
   animation-delay: 2s; }
 
+.texto-2 {
+  transform: translate3d(0px, 100px, 0px);
+  opacity: 0;
+  margin-top: 0px !important; }
+
+.texto-2-anima {
+  animation: texto1 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation-delay: 1s; }
+
 @keyframes texto1 {
   to {
     opacity: 1;
     transform: translate3d(0px, 0px, 0px); } }
-.barra-home {
+.barra-lateral {
   position: fixed;
   width: 100px;
   height: 100%;
@@ -177,15 +158,15 @@ path, polygon, g {
   transition-delay: 2s;
   z-index: 1; }
 
-.barra-home-key {
+.barra-lateral-key {
   transform: translate(0vh, 0px); }
 
-.barra-home img {
+.barra-lateral img {
   position: relative;
   left: 36px;
   top: 42px;
   animation: logo 1s ease-out forwards;
-  animation-delay: 1s;
+  animation-delay: 3.5s;
   opacity: 0; }
 
 @keyframes logo {
@@ -247,7 +228,35 @@ path, polygon, g {
   .menu-home {
     padding: 50px 0; }
 
-  .barra-home img {
+  .barra-lateral img {
     top: 62px; } }
+/*==========  Experimento  ==========*/
+#box {
+  background-color: #88ce02;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  z-index: 1; }
+
+.boxSmall {
+  position: absolute;
+  background-color: #70a40b;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25px;
+  height: 75px;
+  z-index: 2; }
+
+.boxTiny {
+  background-color: #577a14;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  z-index: 3; }
 
 /*# sourceMappingURL=main.css.map */
