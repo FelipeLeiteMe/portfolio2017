@@ -73,10 +73,7 @@ p {
 .topo {
   background-color: #22019F;
   height: 100vh;
-  display: block;
-  background-image: url("http://cdn-motorshow.terra.com.br/wp-content/uploads/sites/2/2016/01/hyundai-hb20-r-spec-2.jpg");
-  background-position: 50% 50%;
-}
+  display: block; }
 
 .img-ilustra-home {
   position: absolute;
