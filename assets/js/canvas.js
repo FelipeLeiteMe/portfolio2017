@@ -85,7 +85,7 @@ function Circle() {
 		var cr = this.r*newo;
 		g = con.createRadialGradient(this.x,this.y,0,this.x,this.y,(cr <= 0 ? 1 : cr));
 		// g.addColorStop(0.0, 'rgba(255,255,255,'+newo+')');
-		g.addColorStop(this.stop, 'rgba(19,0,97,'+(newo*.7)+')');
+		g.addColorStop(this.stop, 'rgba(19,0,97,'+(newo*.5)+')');
 		// g.addColorStop(1.0, 'rgba(92,164,69,0)');
 		con.fillStyle = g;
 		con.fill();
