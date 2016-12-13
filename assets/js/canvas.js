@@ -50,7 +50,7 @@ function draw() {
 }
 
 function Circle() {
-	this.s = {ttl:5000, xmax:5, ymax:5, rmax:5, rt:1, xdef:1920, ydef:800, xdrift:9, ydrift: 1, random:true, blink:true};
+	this.s = {ttl:5000, xmax:4, ymax:5, rmax:4, rt:1, xdef:1920, ydef:800, xdrift:9, ydrift: 1, random:true, blink:true};
 
 	this.reset = function() {
 		this.x = (this.s.random ? WIDTH*Math.random() : this.s.xdef);
