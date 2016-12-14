@@ -69,6 +69,7 @@ header {
   font-size: 12px;
   padding: 10px 15px;
 }
+
 .menu-home span img{
   padding: 0  15px;
 }
@@ -100,11 +101,10 @@ aside {
 	top: 0;
 	left: 0;
 	background: linear-gradient(200deg, #27156E, #6A2A88, #9F4981);
-	opacity: 0;
 	visibility: hidden;
-	transition: all .5s ease;
-	z-index: 2;
-  transform: translate3d(0px, -100%, 0px);
+  transition: all 400ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+	z-index: 9999999;
+  transform: translate3d(100%, 0px, 0px);
 }
 
 .menu-haburguer {
@@ -118,7 +118,7 @@ aside {
   transform: translate3d(0px, 0px, 0px);
 }
 .fechado {
-  transform: translate3d(0px, -100%, 0px);
+  transform: translate3d(100%, 0px, 0px);
 }
 .outro-fechar {
     position: absolute;
@@ -140,8 +140,8 @@ path,polygon,g {
 
 }
 .anima-ilustra-traco {
-  animation: dash 2s ease-in-out forwards;
-  animation-delay: 1s;
+  animation: dash 3s ease-in-out forwards;
+  animation-delay: 0s;
 }
 
 @keyframes dash {
@@ -154,8 +154,8 @@ path,polygon,g {
   opacity: 0;
 }
 .anima-ilustra-fade {
-  animation: opaci 2s linear forwards;
-  animation-delay: 2s;
+  animation: opaci 3s linear forwards;
+  animation-delay: 0.5s;
 }
 
 @keyframes opaci {
@@ -168,23 +168,41 @@ path,polygon,g {
 .texto-1 {
   transform: translate3d(0px, 100px, 0px);
   opacity: 0;
-  margin-top: 0px !important;
 }
 
 .texto-1-anima {
     animation: texto1 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 
 .texto-2 {
   transform: translate3d(0px, 100px, 0px);
   opacity: 0;
-  margin-top: 0px !important;
 }
 
 .texto-2-anima {
     animation: texto1 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
-    animation-delay: 1s;
+    animation-delay: 1.5s;
+}
+
+.texto-3 {
+  transform: translate3d(0px, 100px, 0px);
+  opacity: 0;
+}
+
+.texto-3-anima {
+    animation: texto1 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+    animation-delay: 2s;
+}
+
+.texto-4 {
+  transform: translate3d(0px, 100px, 0px);
+  opacity: 0;
+}
+
+.texto-4-anima {
+    animation: texto1 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) forwards;
+    animation-delay: 2.5s;
 }
 
 @keyframes texto1 {
@@ -201,14 +219,24 @@ path,polygon,g {
     height: 100%;
     background-color: $cor-branco;
     transform: translate(-20vh,0px);
-    transition: all 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
-    transition-delay: 2s;
+    transition: all 1000ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+    transition-delay: 2.5s;
     z-index: 1;
 }
 
 .barra-lateral-key {
   transform: translate(0vh,0px);
+}
 
+// menu
+.menu-home {
+  transform: translate(0px,-20vh);
+  transition: all 1000ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  transition-delay: 2.5s;
+}
+
+.menu-home-key {
+  transform: translate(0px,0vh);
 }
 
 // Logo
@@ -219,7 +247,6 @@ path,polygon,g {
   animation: logo 1s ease-out forwards;
   animation-delay: 3.5s;
   opacity: 0;
-
 }
 
 @keyframes logo {
@@ -271,10 +298,16 @@ path,polygon,g {
 
       .linha-home {
         position: absolute;;
-        width: 700px;
+        width: 0px;
         height: 1px;
         left: 15%;
         background-color: #220135;
+        transition: all 1000ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+      }
+
+      .linha-home-key {
+        width: 700px;
+        transition-delay: 2s;
       }
 
       .textos-home {
